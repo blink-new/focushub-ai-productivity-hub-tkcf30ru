@@ -13,8 +13,6 @@ interface FocusTimerProps {
 export function FocusTimer({ state, onStateChange }: FocusTimerProps) {
   const [isRunning, setIsRunning] = useState(false)
   const [timeLeft, setTimeLeft] = useState(25 * 60) // 25 minutes in seconds
-  const [currentTask] = useState('Review Acme proposal')
-  const [session] = useState(1)
 
   const totalTime = 25 * 60
   const progress = ((totalTime - timeLeft) / totalTime) * 100
@@ -101,7 +99,7 @@ export function FocusTimer({ state, onStateChange }: FocusTimerProps) {
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-medium text-gray-900 truncate">
-                  {currentTask}
+                  Review Acme proposal
                 </p>
                 <p className="text-lg font-mono text-blue-600">
                   {formatTime(timeLeft)}
@@ -169,13 +167,13 @@ export function FocusTimer({ state, onStateChange }: FocusTimerProps) {
                     <p className="text-3xl font-mono font-bold text-gray-900">
                       {formatTime(timeLeft)}
                     </p>
-                    <p className="text-sm text-gray-500">Session {session}</p>
+                    <p className="text-sm text-gray-500">Session 1</p>
                   </div>
                 </div>
               </div>
 
               <h4 className="text-lg font-medium text-gray-900 mb-2">
-                {currentTask}
+                Review Acme proposal
               </h4>
               <p className="text-sm text-gray-500">
                 {isRunning ? 'Focus time' : 'Ready to focus'}
@@ -225,9 +223,9 @@ export function FocusTimer({ state, onStateChange }: FocusTimerProps) {
             <div className="mt-6 pt-4 border-t border-gray-100">
               <div className="flex items-center justify-between text-sm text-gray-500">
                 <span>Today's sessions</span>
-                <span>{session}/8</span>
+                <span>1/8</span>
               </div>
-              <Progress value={(session / 8) * 100} className="mt-2" />
+              <Progress value={(1 / 8) * 100} className="mt-2" />
             </div>
           </Card>
         </motion.div>

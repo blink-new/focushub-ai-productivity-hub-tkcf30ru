@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Sidebar } from "./components/ui/sidebar"
-import { MainContent } from "./components/ui/MainContent"
-import { FocusTimer } from "./components/ui/FocusTimer"
+import { Sidebar } from "./components/Sidebar"
+import { MainContent } from "./components/MainContent"
+import { FocusTimer } from "./components/FocusTimer"
 import { CommandPalette } from './components/CommandPalette'
 import { useKeyboardShortcuts } from './hooks/useKeyboardShortcuts'
 
