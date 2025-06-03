@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { Sidebar } from "./components/Sidebar"
-import { MainContent } from "./components/MainContent"
-import { FocusTimer } from "./components/FocusTimer"
-import { CommandPalette } from './components/CommandPalette'
-import { useKeyboardShortcuts } from './hooks/useKeyboardShortcuts'
+import { Sidebar } from '@/components/Sidebar'
+import { MainContent } from '@/components/MainContent'
+import { FocusTimer } from '@/components/FocusTimer'
+import { CommandPalette } from '@/components/CommandPalette'
+import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts'
 
 export type ViewType = 'inbox' | 'workspace' | 'tasks' | 'calendar' | 'settings'
 export type WorkspaceTab = 'overview' | 'email' | 'tasks' | 'docs' | 'events' | 'people'
